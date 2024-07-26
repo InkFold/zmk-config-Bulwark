@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
-/ {
+/{
 //    behaviors {
 //        rgb_encoder: rgb_encoder {
 //            compatible = 'zmk,behavior-sensor-rotate';
@@ -15,7 +15,6 @@
 //            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
 //        };
 //    };
-
     keymap {
         compatible = "zmk,keymap";
         
@@ -39,12 +38,10 @@
 //              |     ###     | |     ###     | |     ###     | |     ###     | |     ###     | |     ###     |
                     &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7
 //              |_____________| |_____________| |_____________| |_____________| |_____________| |_____________|
-
 //       _____________   _____________   _____________
 //      |     ###     | |     ###     | |     ###     |
             &kp KP_N7       &kp KP_N7       &kp KP_N7
 //      |_____________| |_____________| |_____________|
-
             >;
             // This encoder binding is defined above in the 'behaviors' definition
             sensor-bindings = <&rgb_encoder>;
@@ -70,7 +67,6 @@
 //              |     ###     | |     ###     | |     ###     | |     ###     | |     ###     | |     ###     |
                     &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7
 //              |_____________| |_____________| |_____________| |_____________| |_____________| |_____________|
-
 //       _____________   _____________   _____________
 //      |     ###     | |     ###     | |     ###     |
             &kp KP_N7       &kp KP_N7       &kp KP_N7
