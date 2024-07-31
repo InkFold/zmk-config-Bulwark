@@ -1,0 +1,6 @@
+IF SHIELD_BULWARK
+
+config ZMK_KEYBOARD_NAME
+    default "Bulwark"
+
+endif
