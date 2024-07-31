@@ -72,3 +72,4 @@
         };
     };
 };
+cp ~/Downloads/bulwark-nice_nano_v2-zmk.uf2 /Volumes/NICENANO/
