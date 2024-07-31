@@ -31,7 +31,7 @@
     combos {
         compatible = "zmk,combos";
         combo_lock {
-        key-positions = < >;
+        key-positions = <0 1 2 3>;
         bindings = <&ext_power EP_TOG>;
         };
     };
