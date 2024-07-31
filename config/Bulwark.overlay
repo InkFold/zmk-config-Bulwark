@@ -1,18 +1,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+
 //Use here the default kscan and also the default transform. No need to adjust this in our case.
     chosen {
         zmk, kscan = &default_kscan;
         zmk, matrix_transform =  &default_transform;
     };
-    
-//LED pin definitions here. Might need to tinker with this depending on if the GPIO pin is low or high
-//    leds {
-//            compatible = "gpio-leds";
-//          led {
-//            gpios = <&gpio 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-//    };
     
     default_kscan: kscan {
         compatible = "zmk, kscan-gpio-matrix";
