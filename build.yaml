@@ -1,9 +1,9 @@
 ---
 board: [ "nice_nano_v2" ]
 shield: [ "Bulwark" ]
-include:
-  - board: nice_nano_v2
-    shield: Bulwark
+#include:
+#  - board: nice_nano_v2
+ #   shield: Bulwark
     # include:
 #  - board: bdn9_rev2
 #   - board: nice_nano_v2
