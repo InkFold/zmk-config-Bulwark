@@ -1,0 +1,12 @@
+file_format: "1"
+id: bulwark
+name: Bulwark
+type: shield
+url: https://github.com/foostan/crkbd/
+requires: [nice!nano]
+exposes: [nice!view]
+features:
+  - keys
+  - display
+  - encoder
+  - backlight
