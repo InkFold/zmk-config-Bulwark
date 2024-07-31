@@ -3,12 +3,27 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
+ 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
 
+#define DEFAULT 0
+#define GAME    1
+#define NAVI    2
+
+     behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            }
+        };
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -18,12 +33,12 @@
 // ---------------------------------------------------------------------------------------------------
             bindings = <
 //               _____________   _____________   _____________   _____________   _____________      ______
-//              |     ###     | |     ###     | |     ###     | |     ###     | |     ###     |    | EN_# |
-                    &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7      &kp KP_N7
+//              |     lock    | |     ###     | |     ###     | |  togBLE&USB | |     ###     |    | EN_# |
+               &ext_power EP_TOG   &kp KP_N7       &kp KP_N7     &out OUT_TOG   &bt BT_CLR_ALL     &kp KP_N7
 //              |_____________| |_____________| |_____________| |_____________| |_____________|    |______|
 //               _____________   _____________   _____________   _____________   _____________   _____________
 //              |     ###     | |     ###     | |     ###     | |     ###     | |     ###     | |     ###     |
-                    &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7
+                    &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7       &kp KP_N7      &bootloader
 //              |_____________| |_____________| |_____________| |_____________| |_____________| |_____________|
 //               _____________   _____________   _____________   _____________   _____________   _____________
 //              |     ###     | |     ###     | |     ###     | |     ###     | |     ###     | |     ###     |
@@ -39,8 +54,9 @@
 //      |_____________| |_____________| |_____________|
 // ---------------------------------------------------------------------------------------------------
             >;
-// This encoder binding is defined above in the 'behaviors' definition
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+                <&hm LCTRL A &hm LGUI S &hm LALT D &hm LSHIFT F>;
         };
     };
 };
