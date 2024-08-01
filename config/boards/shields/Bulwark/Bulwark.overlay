@@ -1,5 +1,4 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <behaviors.dtsi>
 
 / {
 
@@ -50,10 +49,16 @@
     //===========================================================
     
     default_transform: matrix_transform {
-        compatible = "zmk, matrix-transform";
-        rows = <5>;
+        compatible = "zmk,matrix-transform";
         columns = <6>;
-        
+        rows = <5>;
+
+// | R4C0 |  R4C1 |  R4C2 |  R4C3 |  R4C4 |  R4C5 |
+// | R3C0 |  R3C1 |  R3C2 |  R3C3 |  R3C4 |  R3C5 |
+// | R2C0 |  R2C1 |  R2C2 |  R2C3 |  R2C4 |  R2C5 |
+// | R1C0 |  R1C1 |  R1C2 |  R1C3 |  R1C4 |  R1C5 |
+// | R0C0 |  R0C1 |  R0C2 |
+
         map = <
             RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)
