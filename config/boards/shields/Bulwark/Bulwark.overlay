@@ -5,18 +5,8 @@
     //===========================================================
 
     chosen {
-        zmk, physical-layout = &default_layout;
-//       zmk, kscan = &default_kscan;
-//       zmk, matrix_transform =  &default_transform;
-    };
-    
-    //===========================================================
- 
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&default_kscan>;
+         zmk, kscan = &default_kscan;
+         zmk, matrix_transform =  &default_transform;
     };
     
     //===========================================================
@@ -50,8 +40,8 @@
     
     default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
-        columns = <6>;
         rows = <5>;
+        columns = <6>;
 
 // | R4C0 |  R4C1 |  R4C2 |  R4C3 |  R4C4 |  R4C5 |
 // | R3C0 |  R3C1 |  R3C2 |  R3C3 |  R3C4 |  R3C5 |
