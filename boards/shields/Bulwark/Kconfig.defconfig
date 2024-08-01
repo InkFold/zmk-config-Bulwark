@@ -1,0 +1,6 @@
+if SHIELD_BULWARK
+
+config ZMK_BULWARK
+    default "Bulwark"
+
+endif
