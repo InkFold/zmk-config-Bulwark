@@ -16,30 +16,28 @@
 #define GAME      1
 
 //=====================================================================================================
-//    behaviors {
-//        hm: homerow_mods {
-//            compatible = "zmk,behavior-hold-tap";
-//            #binding-cells = <2>;
-//            tapping-term-ms = <200>;
-//            quick-tap-ms = <0>;
-//            flavor = "tap-preferred";
-//            bindings = <&kp>, <&kp>;
-//            };
-//        };
+//  behaviors {
+//      hm: homerow_mods {
+//          compatible = "zmk,behavior-hold-tap";
+//          #binding-cells = <2>;
+//          tapping-term-ms = <200>;
+//          quick-tap-ms = <0>;
+//          flavor = "tap-preferred";
+//          bindings = <&kp>, <&kp>;
+//          };
+//      };
 //=====================================================================================================
-    combos {
-        compatible = "zmk,combos";
-        combo_lock {
-        key-positions = <0 1 2 3>;
-        bindings = <&ext_power EP_TOG>;
-        };
-    };
+//   combos {
+//            compatible = "zmk,combos";
+//            combo_lock {
+//            key-positions = <0 1 2 3>;
+//            bindings = <&ext_power EP_TOG>;
+//            };
+//    };
 //=====================================================================================================
 
     keymap {
         compatible = "zmk,keymap";
-
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1
 
         default_layer {
     // ---------------------------------------------------------------------------------------------------
@@ -65,9 +63,9 @@
             &kp SPACE       &kp RET        &kp LGUI
 //      |_____________| |_____________| |_____________|
             >;
+            
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-                <&hm LCTRL A &hm LGUI S &hm LALT D &hm LSHIFT F>;
         };
     // ---------------------------------------------------------------------------------------------------
         
@@ -95,9 +93,9 @@
             &kp SPACE      &kp LCTRL        &kp LALT
 //      |_____________| |_____________| |_____________|
             >;
+            
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-                <&hm LCTRL A &hm LGUI S &hm LALT D &hm LSHIFT F>;
         };
     };
  //=====================================================================================================
