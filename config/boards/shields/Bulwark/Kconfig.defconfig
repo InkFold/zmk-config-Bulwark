@@ -1,6 +1,6 @@
-IF SHIELD_BULWARK
+config SHIELD_BULWARK
+    bool "Enable Bulwark Shield"
+    default y
 
 config ZMK_KEYBOARD_NAME
-    default "Bulwark"
-
-endif
+    default "Bulwark" if SHIELD_BULWARK
