@@ -1,6 +1,7 @@
 if SHIELD_BULWARK
 
 config ZMK_BULWARK
+    string "Bulwark"
     default "Bulwark"
 
 endif
