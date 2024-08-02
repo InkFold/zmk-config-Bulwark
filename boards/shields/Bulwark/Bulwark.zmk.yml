@@ -8,5 +8,4 @@ exposes: [nice!view]
 features:
   - keys
   - display
-  - encoder
   - backlight
