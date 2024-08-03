@@ -28,9 +28,12 @@
         };
 }
 //=====================================================================================================
-//  combos {}
+//  combos {
+
+        };
 //=====================================================================================================
-    macros { //This is just an example macro for testing purposes. Define the name and purpose later
+    macros {
+    //This is just an example macro for testing purposes. Define the name and purpose later
         zmk: zed_em_kay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
