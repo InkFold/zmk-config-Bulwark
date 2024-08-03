@@ -17,7 +17,7 @@
 #define SETTINGS  2
 
 //=====================================================================================================
-//  behaviors {
+  behaviors {
         ls: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -32,7 +32,7 @@
 //=====================================================================================================
     macros {
     //This is just an example macro for testing purposes. Define the name and purpose later
-        zmk: zed_em_kay {
+        macro: zed_em_kay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
