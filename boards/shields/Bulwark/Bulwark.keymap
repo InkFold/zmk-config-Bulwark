@@ -82,6 +82,10 @@
 //            sensor-bindings =
 //                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+        debounce {
+            debounce-press-ms = <5>;  // Adjust this value
+            debounce-release-ms = <5>;  // Adjust this value
+        };
     };
  //=====================================================================================================
 };
