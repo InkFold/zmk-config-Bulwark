@@ -28,11 +28,11 @@
         
         col-gpios
             = <&gpio0 24 (GPIO_ACTIVE_HIGH)> //Col 0 (D5)
-            , <&gpio1 00 (GPIO_ACTIVE_HIGH)> //Col 1 (D6)
+            , <&gpio1 0  (GPIO_ACTIVE_HIGH)> //Col 1 (D6)
             , <&gpio0 11 (GPIO_ACTIVE_HIGH)> //Col 2 (D7)
-            , <&gpio1 04 (GPIO_ACTIVE_HIGH)> //Col 3 (D8)
-            , <&gpio1 06 (GPIO_ACTIVE_HIGH)> //Col 4 (D9)
-            , <&gpio0 09 (GPIO_ACTIVE_HIGH)> //Col 5 (D10)
+            , <&gpio1 4  (GPIO_ACTIVE_HIGH)> //Col 3 (D8)
+            , <&gpio1 6  (GPIO_ACTIVE_HIGH)> //Col 4 (D9)
+            , <&gpio0 9  (GPIO_ACTIVE_HIGH)> //Col 5 (D10)
             ;
     };
     
